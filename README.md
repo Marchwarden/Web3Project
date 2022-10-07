@@ -6,8 +6,10 @@ blockchain transaction be displayed on the run webpage.
 
 This app is made with Vite the react project program and TailWindCSS for styling.
 
-To intall all the required packages:
+To install all the required packages:
 
+smart_contract folder packages:
+    npm install --save-dev hardhat @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
 
 To run the app:
 npm run dev
