@@ -22,7 +22,7 @@ const getEthereumContract = () => {
 }
 
 export const TransactionProvider = ({children}) => {
-    const [connectedAccount, setConnectedAccount] = useState(initialState);    
+    const [connectedAccount, setConnectedAccount] = useState(' ')    
 
 
     const checkIfWalletIsConnected = async () => {
@@ -34,11 +34,12 @@ export const TransactionProvider = ({children}) => {
     const connectWallet = async () => {
         try {
             if(!ethereum) return alert("Please install Metamask");
-            const accounts = await ethereum.request({ method: 'eth_requestAccounts'});
+            const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
 
             setCurrentAccount(accounts[0]);
         } catch (error) {
             console.log(error);
+
             throw new Error("No ethereum object.")
         }
     }

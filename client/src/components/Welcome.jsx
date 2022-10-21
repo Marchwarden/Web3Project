@@ -86,7 +86,7 @@ const Welcome = () => {
                         ) : (
                             <button
                                 type="button"
-                                onClick={handleSubmit}
+                                onClick={connectWallet}
                                 className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] rounded-full cursor-pointer"
                             >
                                 Send Now
