@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import {AiFillPlayCircle} from 'react-icons/ai';
 import {SiEthereum} from 'react-icons/si';
 import {BsInfoCircle} from 'react-icons/bs';
+import { shortenAddress } from '../utils/shortenAddress';
 
 import {TransactionContext} from '../context/TransactionContex';
 import { Loader } from './';
@@ -34,9 +35,9 @@ const Welcome = () => {
         <div className="flex w-full justify-center items-center">
             <div className="flex mf:flex-row flex-col items-start justify-between md:p-20 py-10 px-4">
                 <div className=" flex flex-1 justify-start flex-col mf:mr-10">
-                    <hi className="text-3xl sm;text-5x1 text-white text-gradient py-1">
+                    <h1 className="text-3xl sm;text-5x1 text-white text-gradient py-1">
                         Send Crypto <br/> across the world
-                    </hi>
+                    </h1>
                     <p className="text-left mt-5 text-white font-light mdLw-9/12 w-11/12 text-base">
                         Explore the Crypto World. Buy and sell cryptocurrencies easily on Nimloth.
                     </p>
@@ -71,7 +72,7 @@ const Welcome = () => {
                             </div>
                             <div>
                                 <p className="text-white font-light text-sm">
-                                    Address
+                                    {shortenAddress(currentAccount)}
                                 </p>
                                 <p className="text-white font-semibold text-lg mt-1">
                                     Ethereum
